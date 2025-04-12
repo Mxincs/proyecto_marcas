@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Abrir HTML en el navegador",
+      "type": "chrome", // o "pwa-msedge"
+      "request": "launch",
+      "file": "${workspaceFolder}/index.html"
+    }
+  ]
+}
