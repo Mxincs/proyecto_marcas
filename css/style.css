@@ -1,21 +1,35 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.div1, .div2 {
+.logo {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: monospace;
+}
+
+.contenedor {
+  width: 100%;
   height: 100vh;
+  background: white;
 }
 
-.div1 {
-  background-color: blue;
+.contenido {
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: relative;
+  padding: 0 4rem;
 }
 
-.div2 {
-  background-color: aqua;
+.contenido img {
+  width: 100%;
 }
 
-.cuadrado {
-  width: 150px;
-  height: 150px;
-  background-color: fuchsia;
+img {
+  margin-bottom: 4rem;
 }
