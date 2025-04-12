@@ -1,3 +1,12 @@
+<!--Codigos de colores que usa la pagina
+#d5f5e3
+#d0ece7 
+#d6eaf8 
+#aed6f1 
+#abebc6 
+#a9dfbf -->
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,19 +16,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina principal</title>
+  <link href="https://www.1001fonts.com/sephir-font.html?text=PLANTIFY&page=1" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-  
-  <div class="contenedor-logo">
-    <h1 class="logo">PLANTAS</h1>  
+
+  <!--Aqui iran todos los objetos de la barra del navegador superior-->
+  <div class="nav">
+    
+    <!--Objetos de la izquierda-->
+    <div class="items-izquierda">
+
+      <!--Aqui lo que hago es agregar un boton home a la izquierda de la pagina,
+      el href=# me redirige a algun sitio de la pagina, en este caso como es la principal
+      no me llevara a ningun sitio y por eso coloco el #-->
+      <a href="#" class="boton-home">
+        <img src="assets/pagina-de-inicio.png" alt="boton home">
+      </a>
+
+    </div>
+
+    <!--Objetos de la derecha-->
+    <div class="items-derecha">
+      <a href="#">Register</a>
+    </div>
+  </div>
+
+  <!--Etiquetas para el logo de la pagina principal-->
+  <div>
+    <div class="contenedor-logo">
+    <h1 class="logo">PLANTIFY</h1>  
+    </div>
   </div>
 
   <div class="contenedor"></div>
+
+  <!--Etiquetas para la imagen que ocupara toda la pantalla al moverse la rueda del raton-->
   <div class="contenido">
-    <img src="img/Pagina principal.jpg" alt="imagenheroe"/>
+
+      <div id="galeria">
+        <a href="#">
+          <h2>GALERIA</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicoluptatibus odio rem ducimus a illo ut sit omnis totam adipisci aperiam tempora et sed id. Autem nesciunt, nisi suscipit cum similique quibusdam nostrum?</p>
+        </a>
+      </div>
+
+      <div id="cuidados">
+        <a href="#">
+          <h2>CUIDADOS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur m error sed, consequuntur commodi quos rem illum. Ipsa iusto libero provident fuga delectus id vel.
+            </p>
+        </a>
+      </div>
+
+      <div id="zen">
+        <a href="#">
+          <h2>MODO ZEN</h2> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicis tempora suscipit voluptates dignissimos rem? Nobis illum animi quo officia eaque porro autem earum? Eligendi, praesentium?
+            </p>
+        </a>
+      </div>
+    
+
   </div>
  
  
