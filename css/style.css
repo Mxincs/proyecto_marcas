@@ -99,7 +99,7 @@ a img {
   transition: transform 0.3s ease, background-color 0.3s ease;
   float: left;
   overflow:hidden;
-  margin-bottom: %;
+  margin-bottom: 20%;
 }
 
 .contenido a {
