@@ -1,12 +1,3 @@
-<!--Codigos de colores que usa la pagina
-#d5f5e3
-#d0ece7 
-#d6eaf8 
-#aed6f1 
-#abebc6 
-#a9dfbf -->
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -16,7 +7,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina principal</title>
-  <link href="https://www.1001fonts.com/sephir-font.html?text=PLANTIFY&page=1" rel="stylesheet">
+
+  <!--Links del css y fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -47,42 +42,58 @@
   <!--Etiquetas para el logo de la pagina principal-->
   <div>
     <div class="contenedor-logo">
-    <h1 class="logo">PLANTIFY</h1>  
+    <h1 class="logo">
+      <img src="img/logo.png" alt="logo">
+    </h1>  
     </div>
   </div>
 
   <div class="contenedor"></div>
 
-  <!--Etiquetas para la imagen que ocupara toda la pantalla al moverse la rueda del raton-->
+  <div class="descripcion">
+    <h2>Plantly es una plataforma pensada para los amantes de las plantas, 
+      donde podrás explorar una galería variada de especies y descubrir los 
+      cuidados específicos que cada una necesita. Ideal para quienes buscan 
+      crear un entorno verde y saludable en su hogar o espacio de trabajo.</h2>
+  </div>
+
+  <!--Etiquetas de las cartas-->
   <div class="contenido">
 
       <div id="galeria">
         <a href="#">
           <h2>GALERIA</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicoluptatibus odio rem ducimus a illo ut sit omnis totam adipisci aperiam tempora et sed id. Autem nesciunt, nisi suscipit cum similique quibusdam nostrum?</p>
+            <p>Explora nuestra galería de plantas y descubre una amplia variedad de especies 
+              cuidadosamente seleccionadas. Sumérgete en el mundo natural, 
+              conoce sus detalles y elige la que más se adapte a tu estilo y espacio favorito.</p>
         </a>
       </div>
 
       <div id="cuidados">
         <a href="#">
           <h2>CUIDADOS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur m error sed, consequuntur commodi quos rem illum. Ipsa iusto libero provident fuga delectus id vel.
-            </p>
+            <p>En la seccion de cuidados encontrarás toda la información 
+              necesaria para mantener tu planta sana y feliz; descubre qué tipo 
+              de luz necesita, la frecuencia de riego adecuada, 
+              el tipo de suelo más favorable y consejos específicos 
+              para mantenerla saludable y vibrante durante todo el año.</p>
         </a>
       </div>
 
       <div id="zen">
         <a href="#">
           <h2>MODO ZEN</h2> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicis tempora suscipit voluptates dignissimos rem? Nobis illum animi quo officia eaque porro autem earum? Eligendi, praesentium?
-            </p>
+            <p>El modo zen es un espacio pensado para que 
+              te desconectes del ritmo del día a día. Aquí 
+              podrás relajarte con música suave inspirada en la 
+              naturaleza, mientras dejas atrás el estrés y te conectas contigo mismo.</p>
         </a>
       </div>
     
-
   </div>
  
  
+  <!--Links para json y funcionalidades gsap-->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
