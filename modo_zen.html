@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modo Zen</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <!--Links del css y fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!--Aqui iran todos los objetos de la barra del navegador superior-->
+  <div class="nav">
+    <div class="items-izquierda">
+      <a href="index.html" class="boton-home">
+        <img src="assets/pagina-de-inicio.png" alt="boton home" class="icono-menu">
+      </a>
+    </div>
+
+    <div class="desplegable">
+      <button class="boton-desplegable">
+        <img src="assets/barra-de-menus.png" alt="boton-home" class="icono-menu">
+      </button>
+      <div class="contenido-desplegable">
+        <a href="galeria_plantas.html">Galeria</a>
+        <a href="informacion_plantas.html">Cuidados</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modo-zen">
+    <h1 class="zen-titulo">Modo Zen</h1>
+
+    <div class="zen-audio-container">
+      <audio id="zen-audio" src="audio/videoplayback.m4a"></audio>
+
+      <div class="zen-progress-bar" id="zen-progress-bar">
+        <div class="zen-progress" id="zen-progress"></div>
+      </div>
+
+      <button class="zen-play-btn" id="zen-play-btn">Reproducir</button>
+    </div>
+  </div>
+
+  
+  <!--Links para json y funcionalidades gsap-->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    const audio = document.getElementById("zen-audio");
+    const progress = document.getElementById("zen-progress");
+    const progressBar = document.getElementById("zen-progress-bar");
+    const playBtn = document.getElementById("zen-play-btn");
+
+    // Reproducir o pausar el audio
+    playBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "Pausar";
+      } else {
+        audio.pause();
+        playBtn.textContent = "Reproducir";
+      }
+    });
+
+    // Actualizar barra de progreso con GSAP
+    audio.addEventListener("timeupdate", () => {
+      const progressPercent = (audio.currentTime / audio.duration) * 100;
+      gsap.to(progress, { width: `${progressPercent}%`, ease: "power1.out" });
+    });
+
+    // Permitir hacer clic en la barra para cambiar la posición del audio
+    progressBar.addEventListener("click", (e) => {
+      const rect = progressBar.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const percent = clickX / width;
+      audio.currentTime = percent * audio.duration;
+    });
+  </script>
+  
+</body>
+</html>
