@@ -1,14 +1,17 @@
 # proyecto_marcas
 
-*La pagina plantly funciona como una wiki en la que podras ver una galeria de plantas con sus nombres y encontrar informacion de cada una*
+**La pagina plantly funciona como una wiki en la que podras ver una galeria de plantas con sus nombres y encontrar informacion de cada una**
 
-*Enlace vercel a la pagina*
+**Enlace vercel a la pagina**
+
 proyecto-marcas-plantly.vercel.app
 
-*Enlace al repositorio de github*
+**Enlace al repositorio de github**
+
 https://github.com/Mxincs/proyecto_marcas
 
-*Enlaces con referencias*
+**Enlaces con referencias**
+
 -pagina principal
 https://www.youtube.com/watch?v=bOX-WCXYi8c&list=PLfXtnFUT4XlbGIlrBc9ZbuBjG5bkt0_kT&index=5
 
